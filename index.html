@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- semantic-ui -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <title> Accessibility </title>
+</head>
+
+<div class="d-flex justify-content-center nav-tabs">
+
+    <!-- Tab styling -->            
+    <ul class="nav bg-light" role="tablist">
+        <li class="nav-item" data-menu="avengers">
+            <a href="#movie" id="movie-tab" class="nav-link active" aria-selected="true" data-toggle="tab" role="tab">Movie</a>
+        </li>
+        <li class="nav-item" data-menu="music">
+            <a href="#music" id="music-tab" class="nav-link" aria-selected="false" data-toggle="tab" role="tab">Music</a>
+        </li>
+        <li class="nav-item" data-menu="zootopia">
+            <a href="#show" id="show-tab" class="nav-link" aria-selected="false" data-toggle="tab" role="tab">show</a>
+        </li>
+    </ul>
+    <!-- Tab styling -->
+    
+</div>
+
+
+<video class="container">
+    <source src="video/avengers.mp4" type="video/mp4"/>
+    <track label="English" kind="subtitles" srclang="en" src="vtt/avengers.vtt">
+</video>
+<div class="progress-con d-flex align-items-center">
+    <div class="time">00:00</div>
+    <progress class="container ml-2" id="progress" value="0" min="0">
+       <span id="progress-bar"></span>
+    </progress>
+ </div>
+<div class="controls container d-flex justify-content-center">
+    <button class="playpause" data-media="0"><i class="play circle icon"></i></button>
+    <button class="stop" data-media="1"><i class="stop circle icon"></i></button>
+    <button class="rwd" data-media="2"><i class="backward icon"></i></button>
+    <button class="fwd" data-media="3"><i class="forward icon"></i></button>
+    <button class="caption" data-media="4"><i class="closed captioning outline icon"></i></button>
+    <button id="mute" type="button" data-caption="mute" data-media="5"><i class="volume up icon"></i></button>
+  </div>
+
+
+  <div class="tab-pane fade" id="music" aria-labelledby="music-tab" role="tabpanel">
+
+    <div class="innerContent">
+        <audio class="container-fluid">
+            <source src="music/rocky.mp3" type="audio/mp3"/> <!--ontimeupdate="updatebar()"-->
+        </audio>
+        <div class="thumbnail container d-flex flex-column justify-content-center align-items-center m-auto">
+            <img src="images/rocky.png" alt="audio thumbnail">
+            <div class="audio-about mt-3">
+                <h5>Rocky Mountain</h5>
+                <p>John denvar</p>
+            </div>
+            <div class="progress-bar-con">
+                <span id="current-time"></span>/
+                <span id="duration"></span>
+                <div class="progress"></div>
+            </div>
+            <div class="custom-controls d-flex">
+                <img src="images/play.svg" data-button="0"  alt="play">
+                <img src="images/pause.svg"  data-button="1" alt="pause">
+                <img src="images/stop.svg" data-button="2" alt="stop">
+                <img src="images/rewind.svg" data-button="3" alt="rewind">
+            </div>
+        </div>
+    </div>
+    <div class="transcript">
+        <a type="button" class="btn small btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <img style="margin-right: 15px;" src="https://img.icons8.com/ios-filled/30/000000/subtitles.png"/>transcript
+        </a>
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body col-12">
+                [Music]<br><br>
+                He was born in the summer of his twenty-seventh year
+                Coming home to a place he'd never been before
+                He left yesterday behind him
+                You might say he was born again
+                You might say he found a key for ev'ry door<br><br>
+                
+                When he first came to the mountains his life was far away
+                On the road and hangin' by a song
+                But the string's already broken, and he doesn't really care
+                It keeps changin' fast, and it don't last for long<br><br>
+                
+                But the Colorado Rocky Mountain high
+                I've seen it rainin' fire in the sky
+                The shadow from the starlight
+                Is softer than a lullaby
+                Rocky Mountain high
+                Rocky Mountain high<br><br>
+                
+                He climbed cathedral mountains
+                He saw silver clouds below
+                He saw everything as far as you can see
+                And they say that he got crazy once
+                And he tried to touch the sun
+                And he lost a friend but kept his memory<br><br>
+                
+                Now he walks in quiet solitude
+                The forests and the streams
+                Seeking grace in every step he takes
+                His sight has turned inside
+                Himself to try and understand
+                The serenity of a clear blue mountain lake<br><br>
+                
+                And the Colorado Rocky Mountain high
+                I've seen it rainin' fire in the sky
+                You can talk to God and listen to the casual reply
+                Rocky Mountain high
+                Rocky Mountain high<br><br>
+                
+                Now his life is full of wonder
+                But his heart still knows some fear
+                Of a simple thing, he cannot comprehend
+                Why they try to tear the mountains down
+                To bring in a couple more
+                More people, more scars upon the land<br><br>
+                
+                And the Colorado Rocky Mountain high
+                I've seen it rainin' fire in the sky
+                I know he'd be a poor man
+                If he never saw an eagle fly
+                Rocky Mountain high
+                Colorado Rocky Mountain high
+                I've seen it rainin' fire in the sky
+                Friends around the campfire
+                Everybody's high<br><br>
+                
+                Rocky Mountain high.....(4)<br><br>
+                [Music]
+            </div>
+        </div>
+    </div>
+</div>
+  <script type="module" src="js/main.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
