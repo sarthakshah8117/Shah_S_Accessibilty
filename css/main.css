@@ -1,1 +1,33 @@
-.player{width:480px;margin:10px auto;border:1px solid #ccc}video,audio{width:100%}.controls{height:50px}.controls button{display:flex;justify-content:center;align-items:center;border:0;height:100%;width:15%;margin:0 auto;cursor:pointer;background:none}.controls button i{display:flex;justify-content:center;align-items:center;color:red;font-size:2rem}.controls button span{font-family:Haettenschweiler,"Arial Narrow Bold",sans-serif;font-size:2.2rem;color:red;letter-spacing:2px}.controls button:hover,.controls button:focus{background:#b4ffc9}.controls button:active{background:#b4ffc9}.controls div{font-size:12px;display:inline-block;line-height:36px;width:45px}video{margin-bottom:-5px}.line-through{text-decoration-line:line-through}.line{text-decoration-line:none}.progress-bar{display:flex;align-items:center}*{margin:0;padding:0;box-sizing:border-box}.container a{padding:8px 80px;color:#292929}.innerContent{padding:50px 0}.innerContent .thumbnail{width:100%}.innerContent .thumbnail img{width:30%;border-radius:20px}.innerContent .thumbnail .custom-controls img{width:5vh;height:auto;margin-top:15px;margin-right:10px}.innerContent .thumbnail .custom-controls img:hover{cursor:pointer;background-color:#add8e6}.collapseExample{position:fixed;top:0}.active-pop{background:#b3b3b3;border-radius:50%}.active-music{background-color:#add8e6}/*# sourceMappingURL=main.css.map */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container a{
+    padding: 10px;;
+}
+
+.innerContent {
+    padding: 50px 0;
+}
+
+.collapseExample {
+    position: relative;
+}
+
+.active-pop {
+    color: rebeccapurple;
+    border-radius: 50%;
+}
+
+.player {
+    width: 500px;
+    margin: 10px;
+
+}
+
+video, audio {
+    width: 100%;
+}
+

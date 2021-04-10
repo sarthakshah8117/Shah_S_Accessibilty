@@ -1,5 +1,5 @@
-import "./module/video.js";
-import "./module/videoloop.js";
+import "./modules/video.js";
+import "./modules/videoloop.js";
 
 
 
