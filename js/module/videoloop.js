@@ -1,12 +1,12 @@
 const button = document.querySelectorAll('.show-controls button'),
-    showplayer = document.querySelector('.zoo');
+    showplayer = document.querySelector('.shows');
 
-const playPauseBtn = document.querySelector('.playpausez'),
-      caption = document.querySelector('.captionz'),
-      mute = document.querySelector('#mutez'),
-      timeLabel = document.querySelector('.timez'),
-      z = document.getElementById('.progressz'),
-      progressBar = document.getElementById('progress-barz');
+const playPauseButton = document.querySelector('.playpauseshow'),
+      caption = document.querySelector('.captionshow'),
+      mute = document.querySelector('#muteshow'),
+      timeLabel = document.querySelector('.timeshow'),
+      z = document.getElementById('.progresshow'),
+      progressBar = document.getElementById('progress-barshow');
 
 function videocontrols(){
 
@@ -15,11 +15,11 @@ function videocontrols(){
         if(showplayer.paused) {
             showplayer.load();
             showplayer.play();
-            playPauseBtn.innerHTML = '<i class="pause circle icon"></i>';
+            // playPauseButton.innerHTML = '<i class="pause circle icon"></i>';
             // playPauseBtn.textContent = 'Pause';
           } else {
             showplayer.pause();
-            playPauseBtn.innerHTML = '<i class="play circle icon"></i>';
+            // playPauseButton.innerHTML = '<i class="play circle icon"></i>';
             // playPauseBtn.textContent = 'Play';
         }
     }
@@ -28,21 +28,21 @@ function videocontrols(){
     else if(this.dataset.media == 7){
         showplayer.pause();
         showplayer.currentTime = 0;
-        playPauseBtn.innerHTML = '<i class="play circle icon"></i>';
+        // playPauseButton.innerHTML = '<i class="play circle icon"></i>';
     }
 
     // rewind
     else if(this.dataset.media == 8){
-        showplayer.currentTime -= 3;
+        showplayer.currentTime -= 10;
     }
 
     // forward
     else if(this.dataset.media == 9){
-        showplayer.currentTime += 3;
+        showplayer.currentTime += 10;
         if(showplayer.currentTime >= showplayer.duration || showplayer.paused) {
             showplayer.pause();
             showplayer.currentTime = 0;
-            playPauseBtn.innerHTML = '<i class="play circle icon"></i>';
+            // playPauseButton.innerHTML = '<i class="play circle icon"></i>';
         }
     }
 
@@ -50,14 +50,15 @@ function videocontrols(){
     else if(this.dataset.media == 10){
         if(showplayer.textTracks[0].mode == 'hidden'){
             showplayer.textTracks[0].mode = 'showing';
-            caption.innerHTML = '<i class="closed captioning icon"></i>';
+            // caption.innerHTML = '<i class="closed captioning icon"></i>';
         }
         else{
             // caption.querySelector(".closed").classList.remove("line");
             // caption.querySelector(".closed").classList.add("line-through");
             showplayer.textTracks[0].mode = 'hidden';
-            caption.innerHTML = '<i class="closed captioning outline icon"></i>';
+            // caption.innerHTML = '<i class="closed captioning outline icon"></i>';
         }
+        
     }
 
     // Volume

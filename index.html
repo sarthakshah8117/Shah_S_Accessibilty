@@ -10,14 +10,20 @@
     <title>sarthak-Assignment</title>
 </head>
 <body>
-    <section class="container">
+    <div class="container">
         <h3>ROKU</h3>
         <p>Audio & Video Streaming with Accessibility</p>
         <div>
             <ul class="nav bg-dark">
                 <li class="nav-item"> <a href="#movie" id="movie-tab" class="nav-link active" data-toogle="tab">Movie</a></li>
-                <li class="nav-item"> <a href="#Audio" id="Audio-tab" class="nav-link " data-toogle="tab">Audio</a></li>
-                <li class="nav-item"> <a href="#movie" id="movie-tab" class="nav-link " data-toogle="tab">TV Show</a></li>
+                <!-- <li class="nav-item"> <a href="#music" id="music-tab" class="nav-link " data-toogle="tab">Music</a></li> -->
+                
+                <li class="nav-item">
+                    <a href="#music" id="music-tab" class="nav-link" data-toggle="tab">Music</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#show" id="music-tab" class="nav-link" data-toggle="tab">TV Show</a>
+                </li>
             </ul>
         </div>
 
@@ -33,7 +39,7 @@
                         </video>
 
                         <div class="progress-bar d-flex flex-row justify-content-center">
-                            <div class="time">00</div>
+                            <div class="time">00:00</div>
                             <progress class="container" id="progress" value="0" min="0"></progress>
                         </div>
 
@@ -43,7 +49,7 @@
                             <button class="rewind" data-media="2"><i class="backward icon"></i></button>
                             <button class="forward" data-media="3"><i class="forward icon"></i></button>
                             <button class="caption" data-media="4"><i class="closed captioning outline icon"></i></button>
-                            <button class="mute" type="button" data-caption="mute" data-media="5"><i class="volume up icon"></i></button>
+                            <button id="mute" type="button" data-caption="mute" data-media="5"><i class="volume up icon"></i></button>
                         </div>
                         
                     </div>
@@ -56,7 +62,7 @@
                     <audio class="container">
                         <source src="music/shakira.mp3" type="audio/mp3"/>
                     </audio>
-                    <div class="thumbnail container d-flex flex-column justify-content-center align-items-center">
+                    <div class="thumbnail container d-flex flex-column justify-content-center align-items-center m-auto">
                         <img src="images/shakira.jpg" alt="image">
                         <div class="audio-about mt-3">
                             <h2>Waka Waka</h2>
@@ -75,8 +81,8 @@
                     </div>
                 </div>
                 <div class="transcript">
-                    <a type="button" class="btn small btn-outline-secondary" data-toogle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        Lyrics
+                    <a type="button" class="btn small btn-outline-secondary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <img style="margin-right: 15px;" src="https://img.icons8.com/ios-filled/30/000000/subtitles.png"/>transcriptLyrics
                     </a>
                     <div class="collapse" id="collapseExample">
                         <div class="card card-body col-12">
@@ -179,8 +185,33 @@
                 </div>
             </div>
 
+
+            <div class="tab-pane fade" id="show">
+                <div class="innerContent">
+                    <div class="avenge-movie">
+                        <video class="container shows" data-button="0">
+                            <source src="video/friends.mp4" type="video/mp4"/>
+                            <track label="English" kind="subtitles" srclang="en" src="vtt/friends.vtt">
+                        </video>
+                        <div class="progress-con d-flex justify-content-center">
+                            <div class="timeshow">00:00</div>
+                            
+                         </div>
+                        <div class="controls container d-flex justify-content-center show-controls">
+                            <button class="playpauseshow" data-media="6"><i class="play circle icon"></i></button>
+                            <button class="stopshow" data-media="7"><i class="reply circle icon"></i></button>
+                            <button class="rewind" data-media="8"><i class="backward icon"></i></button>
+                            <button class="forward" data-media="9"><i class="forward icon"></i></button>
+                            <button class="captionshow" data-media="10"><i class="closed captioning outline icon"></i></button>
+                            <button id="muteshow" type="button" data-media="11"><i class="volume up icon"></i></button>
+                          </div>
+                          
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
 
     <script type="module" src="js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
