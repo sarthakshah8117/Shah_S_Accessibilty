@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container a{
+    padding: 10px;;
+}
+
+.innerContent {
+    padding: 50px 0;
+}
+
+.collapseExample {
+    position: relative;
+}
+
+.active-pop {
+    color: rebeccapurple;
+    border-radius: 50%;
+}
+
+.player {
+    width: 500px;
+    margin: 10px;
+
+}
+
+video, audio {
+    width: 100%;
+}
+
